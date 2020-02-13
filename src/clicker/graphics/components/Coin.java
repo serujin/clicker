@@ -10,7 +10,7 @@ import clicker.inputs.Mouse;
 
 public class Coin extends JLabel {
 	private static final long serialVersionUID = 1L;
-	Mouse mouse = new Mouse();
+	private Mouse mouse = new Mouse(1);
 	public Coin(String path) {
 		setSize(Cons.COIN_SIZE);
 		setLocation(Cons.WIDTH/2-Cons.COIN_SIZE.width/2,Cons.HEIGHT/2-Cons.COIN_SIZE.height/2);

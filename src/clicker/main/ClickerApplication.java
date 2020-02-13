@@ -21,6 +21,7 @@ public class ClickerApplication {
 		System.exit(0);
 	}
 	public static void refreshAll() {
+		Cons.money+=Cons.passiveMoney;
 		Scene.refreshMoney();
 	}
 }
@@ -29,8 +30,7 @@ class Runner implements Runnable {
 	public void run() {
 		while(ClickerApplication.working) {
 			try {
-				Thread.sleep(Cons.minTime);
-				System.out.println(Cons.minTime);
+				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 
 			}
