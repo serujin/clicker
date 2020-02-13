@@ -1,8 +1,8 @@
 package clicker.main;
 
-import clicker.constants.Cons;
 import clicker.graphics.scenes.Scene;
 import clicker.graphics.window.Window;
+import clicker.inputs.Mouse;
 
 public class ClickerApplication {
 	private static Thread graphics;
@@ -21,7 +21,7 @@ public class ClickerApplication {
 		System.exit(0);
 	}
 	public static void refreshAll() {
-		Cons.money+=Cons.passiveMoney;
+		Mouse.money+=Mouse.passiveMoney;
 		Scene.refreshMoney();
 	}
 }

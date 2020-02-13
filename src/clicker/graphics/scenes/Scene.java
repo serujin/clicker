@@ -18,8 +18,8 @@ public class Scene extends JPanel {
 	public static JTextField UpgradeMptField = new JTextField();
 	private static Mouse mptMouse = new Mouse(2);
 	private static Mouse mpsMouse = new Mouse(3);
-	public static Upgrade moneyPerTapUpgrade = new Upgrade(Cons.UPGRADE_MTP_POSITION, mptMouse, Cons.moneyPerTapCost, Cons.mptEnabled, Cons.MPT_PATH_ENABLED, Cons.MPT_PATH_DISABLED);
-	public static Upgrade moneyPerSecondUpgrade = new Upgrade(Cons.UPGRADE_MTS_POSITION, mpsMouse, Cons.passiveMoneyCost, Cons.mpsEnabled, Cons.MPS_PATH_ENABLED, Cons.MPS_PATH_DISABLED);
+	public static Upgrade moneyPerTapUpgrade = new Upgrade(Cons.UPGRADE_MTP_POSITION, mptMouse, Mouse.moneyPerTapCost, Cons.mptEnabled, Cons.MPT_PATH_ENABLED, Cons.MPT_PATH_DISABLED,1);
+	public static Upgrade moneyPerSecondUpgrade = new Upgrade(Cons.UPGRADE_MTS_POSITION, mpsMouse, Mouse.passiveMoneyCost, Cons.mpsEnabled, Cons.MPS_PATH_ENABLED, Cons.MPS_PATH_DISABLED,2);
 	public Font f = new Font("Verdana",0,Cons.WIDTH/50);
 	private static DecimalFormat d = new DecimalFormat("###,###,###.###");
 	public Scene() {
@@ -60,11 +60,11 @@ public class Scene extends JPanel {
 		refreshMoney();
 	}
 	public static void refreshMoney() {
-		moneyField.setText(Cons.MONEY+d.format(Cons.money)+" €");
-		mpsField.setText(Cons.MONEY_PER_SECOND+d.format(Cons.passiveMoney)+" €");
-		mptField.setText(Cons.MONEY_PER_TAP+d.format(Cons.moneyPerTap)+" €");
-		UpgradeMptField.setText(Cons.COST+d.format(Cons.moneyPerTapCost)+" €");
-		UpgradeMpsField.setText(Cons.COST+d.format(Cons.passiveMoneyCost)+" €");
+		moneyField.setText(Cons.MONEY+d.format(Mouse.money)+" €");
+		mpsField.setText(Cons.MONEY_PER_SECOND+d.format(Mouse.passiveMoney)+" €");
+		mptField.setText(Cons.MONEY_PER_TAP+d.format(Mouse.moneyPerTap)+" €");
+		UpgradeMptField.setText(Cons.COST+d.format(Mouse.moneyPerTapCost)+" €");
+		UpgradeMpsField.setText(Cons.COST+d.format(Mouse.passiveMoneyCost)+" €");
 		moneyPerTapUpgrade.refreshUpgradeLabel();
 		moneyPerSecondUpgrade.refreshUpgradeLabel();
 	}

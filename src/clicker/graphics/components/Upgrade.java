@@ -17,7 +17,9 @@ public class Upgrade extends JLabel {
 	private Icon disabledIcon; 
 	private double price;
 	private boolean enabled;
-	public Upgrade(Point p, Mouse mouse, double price, boolean check, String enabledPath,String disabledPath) {
+	private int id;
+	public Upgrade(Point p, Mouse mouse, double price, boolean check, String enabledPath,String disabledPath, int id) {
+		this.id=id;
 		initUpgrade(p);
 		ImageIcon enabledIconImg = new ImageIcon(enabledPath);
 		ImageIcon disabledIconImg = new ImageIcon(disabledPath);
@@ -33,7 +35,7 @@ public class Upgrade extends JLabel {
 		setBorder(new LineBorder(Color.BLACK));
 	}
 	public void refreshUpgradeLabel() {
-		checkAvaliableUpgrade();
+		checkAvaliableUpgrade(id);
 		if(enabled) {
 			setIcon(enabledIcon);
 			setFocusable(true);
@@ -42,9 +44,14 @@ public class Upgrade extends JLabel {
 			setFocusable(false);
 		}
 	}
-	public void checkAvaliableUpgrade() {
-		if(Cons.money>price) {
+	public void checkAvaliableUpgrade(int p) {
+		if(Mouse.money>price) {
 			enabled=true;
+			if (p==1) {
+				price=Mouse.moneyPerTapCost;
+			} else {
+				price=Mouse.passiveMoneyCost;
+			}
 		} else {
 			enabled=false;
 		}
