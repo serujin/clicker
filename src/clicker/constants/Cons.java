@@ -26,8 +26,8 @@ public class Cons {
 	public static double passiveMoney = 0;
 	public static double moneyPerTapCost = 0.1;
 	public static double passiveMoneyCost = 2;
-	public static final Point MONEY_PER_TAP_POSITION = new Point(Cons.WIDTH/40,Cons.HEIGHT*80/100);
-	public static final Point MONEY_PER_SECOND_POSITION = new Point(Cons.WIDTH*73/100,Cons.HEIGHT*80/100);
+	public static final Point UPGRADE_MTP_POSITION = new Point(Cons.WIDTH/40,Cons.HEIGHT*80/100);
+	public static final Point UPGRADE_MTS_POSITION = new Point(Cons.WIDTH*73/100,Cons.HEIGHT*80/100);
 	public static final Point TIME_PER_REFRESH_POSITION = new Point(Cons.WIDTH/2-Cons.COIN_SIZE.width/2,Cons.HEIGHT*80/100);
 	public static final Color SCENE_BG = new Color(14,122,133);
 	public static boolean mptEnabled = false;

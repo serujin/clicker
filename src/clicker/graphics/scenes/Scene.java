@@ -18,8 +18,8 @@ public class Scene extends JPanel {
 	public static JTextField UpgradeMptField = new JTextField();
 	private static Mouse mptMouse = new Mouse(2);
 	private static Mouse mpsMouse = new Mouse(3);
-	public static Upgrade moneyPerTapUpgrade = new Upgrade(Cons.MONEY_PER_TAP_POSITION, mptMouse, Cons.moneyPerTapCost, Cons.mptEnabled, Cons.MPT_PATH_ENABLED, Cons.MPT_PATH_DISABLED);
-	public static Upgrade moneyPerSecondUpgrade = new Upgrade(Cons.MONEY_PER_SECOND_POSITION, mpsMouse, Cons.passiveMoneyCost, Cons.mpsEnabled, Cons.MPS_PATH_ENABLED, Cons.MPS_PATH_DISABLED);
+	public static Upgrade moneyPerTapUpgrade = new Upgrade(Cons.UPGRADE_MTP_POSITION, mptMouse, Cons.moneyPerTapCost, Cons.mptEnabled, Cons.MPT_PATH_ENABLED, Cons.MPT_PATH_DISABLED);
+	public static Upgrade moneyPerSecondUpgrade = new Upgrade(Cons.UPGRADE_MTS_POSITION, mpsMouse, Cons.passiveMoneyCost, Cons.mpsEnabled, Cons.MPS_PATH_ENABLED, Cons.MPS_PATH_DISABLED);
 	public Font f = new Font("Verdana",0,Cons.WIDTH/50);
 	private static DecimalFormat d = new DecimalFormat("###,###,###.###");
 	public Scene() {
@@ -50,11 +50,11 @@ public class Scene extends JPanel {
 		mptField.setEditable(false);
 		mptField.setBackground(this.getBackground());
 		UpgradeMptField.setFont(f);
-		UpgradeMptField.setBounds(300,300,Cons.COIN_SIZE.width,Cons.COIN_SIZE.height/3);
+		UpgradeMptField.setBounds(Cons.WIDTH/40,Cons.HEIGHT*80/100-Cons.COIN_SIZE.height/5,Cons.COIN_SIZE.width,Cons.COIN_SIZE.height/6);
 		UpgradeMptField.setEditable(false);
 		UpgradeMptField.setBackground(this.getBackground());
 		UpgradeMpsField.setFont(f);
-		UpgradeMpsField.setBounds(700,700,Cons.COIN_SIZE.width,Cons.COIN_SIZE.height/3);
+		UpgradeMpsField.setBounds(Cons.WIDTH*73/100,Cons.HEIGHT*80/100-Cons.COIN_SIZE.height/5,Cons.COIN_SIZE.width,Cons.COIN_SIZE.height/6);
 		UpgradeMpsField.setEditable(false);
 		UpgradeMpsField.setBackground(this.getBackground());
 		refreshMoney();
