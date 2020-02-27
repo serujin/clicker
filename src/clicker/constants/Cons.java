@@ -12,11 +12,11 @@ public class Cons {
 	public static final Dimension DIMENSION = new Dimension(WIDTH,HEIGHT);
 	public static final String TITLE = "Clicker Game";
 	public static final Dimension COIN_SIZE = new Dimension(WIDTH/4,HEIGHT/2);
-	public static final String COIN_PATH = "./resources/Coin.png";
-	public static final String MPT_PATH_ENABLED = "./resources/mptgreen.png";
-	public static final String MPS_PATH_ENABLED = "./resources/mpsgreen.png";
-	public static final String MPT_PATH_DISABLED = "./resources/mptred.png";
-	public static final String MPS_PATH_DISABLED = "./resources/mpsred.png";
+	public static final String COIN_PATH = "Coin.png";
+	public static final String MPT_PATH_ENABLED = "mptgreen.png";
+	public static final String MPS_PATH_ENABLED = "mpsgreen.png";
+	public static final String MPT_PATH_DISABLED = "mptred.png";
+	public static final String MPS_PATH_DISABLED = "mpsred.png";
 	public static final String MONEY = "   MONEY: ";
 	public static final String MONEY_PER_SECOND = "   MONEY/SEC: ";
 	public static final String MONEY_PER_TAP = "   MONEY/TAP: ";

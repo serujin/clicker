@@ -21,8 +21,8 @@ public class Upgrade extends JLabel {
 	public Upgrade(Point p, Mouse mouse, double price, boolean check, String enabledPath,String disabledPath, int id) {
 		this.id=id;
 		initUpgrade(p);
-		ImageIcon enabledIconImg = new ImageIcon(enabledPath);
-		ImageIcon disabledIconImg = new ImageIcon(disabledPath);
+		ImageIcon enabledIconImg = new ImageIcon(getClass().getClassLoader().getResource(enabledPath));
+		ImageIcon disabledIconImg = new ImageIcon(getClass().getClassLoader().getResource(disabledPath));
 		enabledIcon = new ImageIcon(enabledIconImg.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		disabledIcon = new ImageIcon(disabledIconImg.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.price=price;

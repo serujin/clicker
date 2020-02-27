@@ -14,7 +14,7 @@ public class Coin extends JLabel {
 	public Coin(String path) {
 		setSize(Cons.COIN_SIZE);
 		setLocation(Cons.WIDTH/2-Cons.COIN_SIZE.width/2,Cons.HEIGHT/2-Cons.COIN_SIZE.height/2);
-		ImageIcon iconImg = new ImageIcon(path);
+		ImageIcon iconImg = new ImageIcon(getClass().getClassLoader().getResource(path));
 		Icon icon = new ImageIcon(iconImg.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		setIcon(icon);
 		addMouseListener(mouse);
